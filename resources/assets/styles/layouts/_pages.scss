@@ -1,0 +1,28 @@
+.page-header {
+  h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      min-width: 650px;
+      background: $text;
+      height: 1px;
+      bottom: 0;
+      right: 0;
+      border: 1px solid $text;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      margin-top: 0;
+      font-size: 40px;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

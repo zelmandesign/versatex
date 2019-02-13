@@ -1,0 +1,82 @@
+.solutions {
+  background: url('../images/bg-white.jpg');
+  background-attachment: fixed;
+
+  .pagination a {
+    display: block;
+    height: 110px;
+    margin-bottom: 5px;
+    color: $yellow;
+    position: relative;
+    padding: 4px;
+  }
+
+  .section-class-name {
+    h1 {
+      text-transform: uppercase;
+      border-bottom: 1px solid $black;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  .box {
+    font-size: 18px;
+
+    .card {
+      border-radius: 0;
+
+      .card-text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .btn {
+    border-radius: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    .pagination {
+      display: none;
+    }
+  }
+
+  .res {
+    .menu-wrapper {
+      text-align: left;
+      position: fixed;
+      left: 10px;
+      top: 50%;
+      z-index: 10;
+
+      ul {
+        list-style: none;
+
+        li {
+          a {
+            color: $black;
+
+            &:hover {
+              color: $yellow;
+            }
+          }
+
+          .active {
+            color: $yellow;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

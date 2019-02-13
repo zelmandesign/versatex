@@ -1,0 +1,366 @@
+body {
+  font-family: 'Avenir Next LT Pro', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 23px;
+  color: $text;
+  background: #fff;
+  text-align: right;
+  overflow-x: hidden;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
+
+  a {
+    transition: all 0.25s ease;
+    color: $yellow;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 60px;
+    margin-left: auto;
+    max-width: 960px;
+    margin-top: 300px;
+  }
+
+  #background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+
+  #home {
+    text-align: left;
+    padding: 0;
+    padding-left: 20px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      height: 330px;
+      content: '';
+      border: 2px solid $black;
+
+      @include media-breakpoint-down(md) {
+        content: none;
+      }
+    }
+
+    h1 {
+      font-size: 75px;
+      font-family: 'Roboto', sans-serif;
+
+      &:first-child {
+        color: $black;
+      }
+
+      &:nth-child(2) {
+        color: $yellow;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 60px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .pagination {
+    position: fixed;
+    transform: translateY(-50%);
+    font-size: 1.4em;
+    z-index: 10;
+    top: 50%;
+    height: 80%;
+    right: 20px;
+    width: 2px;
+    background: #fff;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+    }
+  }
+
+  .pagination a {
+    display: block;
+    height: 150px;
+    margin-bottom: 5px;
+    color: $yellow;
+    position: relative;
+    padding: 4px;
+  }
+
+  .pagination a.active::after {
+    box-shadow: inset 0 0 0 10px;
+  }
+
+  .pagination a .hover-text {
+    display: none;
+  }
+
+  .pagination a:hover .hover-text {
+    opacity: 1;
+  }
+
+  .pagination a::after {
+    -webkit-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: -2px;
+    bottom: 0;
+  }
+
+  .section-class-name {
+    position: relative;
+    overflow-x: hidden;
+    min-width: 100%;
+    min-height: 100vh;
+
+    .inner {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.home {
+  background: url('../images/home-bg.jpg');
+  background-attachment: fixed;
+}
+
+.about-us {
+  background: url('../images/about-bg.jpg');
+  background-attachment: fixed;
+
+  .page-header {
+    padding-top: 300px;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+
+  section {
+    h2 {
+      border-bottom: 1px solid #fff;
+      width: 600px;
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: 500px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-top: 100px;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      &:last-child {
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  #ingenuity {
+    background: #000;
+    overflow-y: hidden;
+
+    h2 {
+      font-size: 80px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  #our-reach {
+    background: url('../images/bg-globe.jpg');
+    background-attachment: cover;
+
+    h2 {
+      font-size: 80px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  #our-values {
+    text-align: left;
+    background: $black;
+
+    .container-fluid {
+      padding-left: 70px;
+      padding-right: 70px;
+      margin-top: 200px;
+
+      @include media-breakpoint-down(md) {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-top: 50px;
+      }
+
+      .col-lg {
+        padding-right: 60px;
+        padding-left: 60px;
+
+        @include media-breakpoint-down(lg) {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+
+        h3 {
+          font-size: 40px;
+
+          @include media-breakpoint-down(md) {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-us {
+  background: url('../images/contact-bg.jpg');
+  background-attachment: fixed;
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 60px;
+    margin-left: auto;
+    max-width: 620px;
+    margin-top: 200px;
+  }
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .vid-info {
+    width: 50%;
+    padding: 0.5rem;
+  }
+
+  .vid-info h1 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .vid-info .acronym { display: none; }
+}
+
+.embed-container-wrapper {
+  position: fixed;
+
+  .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: auto;
+    max-height: 100%;
+  }
+
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

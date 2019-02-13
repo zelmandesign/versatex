@@ -1,0 +1,47 @@
+.dark {
+  color: #fff;
+
+  .banner .nav a {
+    color: #fff;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .page-header {
+    h1 {
+      &::after {
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  .brand {
+    width: 120px;
+    height: 160px;
+    background: url('../images/logo-white.png');
+
+    @include media-breakpoint-down(sm) {
+      width: auto;
+      height: auto;
+      background: none;
+      line-height: 1.25;
+    }
+  }
+}
+
+.light {
+  .brand {
+    width: 120px;
+    height: 160px;
+    background: url('../images/logo-black.png');
+
+    @include media-breakpoint-down(sm) {
+      width: auto;
+      height: auto;
+      background: none;
+      line-height: 1.25;
+    }
+  }
+}

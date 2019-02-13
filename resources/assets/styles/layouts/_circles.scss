@@ -1,0 +1,106 @@
+.circle {
+  position: absolute;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: $yellow;
+  border-right-color: transparent;
+  border-bottom-color: $yellow;
+  border-left-color: $yellow;
+  top: 50%;
+  left: -550px;
+  box-sizing: border-box;
+  width: 700px;
+  height: 700px;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(659deg);
+  }
+}
+
+@for $i from 31 through 32 {
+  .circle-#{$i} {
+    $width: 700px + ($i * 50);
+    $height: 700px + ($i * 50);
+
+    width: $width;
+    height: $height;
+    animation: spin (100) + s linear infinite;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  }
+}
+
+@for $i from 20 through 30 {
+  .circle-#{$i} {
+    $width: 700px + ($i * 50);
+    $height: 700px + ($i * 50);
+
+    width: $width;
+    height: $height;
+    animation: spin (130) + s linear infinite;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  }
+}
+
+@for $i from 26 through 29 {
+  .circle-#{$i} {
+    $width: 700px + ($i * 50);
+    $height: 700px + ($i * 50);
+
+    width: $width;
+    height: $height;
+    animation: spin (140) + s linear infinite;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  }
+}
+
+@for $i from 21 through 25 {
+  .circle-#{$i} {
+    $width: 700px + ($i * 50);
+    $height: 700px + ($i * 50);
+
+    width: $width;
+    height: $height;
+    animation: spin (150) + s linear infinite;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  }
+}
+
+@for $i from 11 through 20 {
+  .circle-#{$i} {
+    $width: 700px + ($i * 50);
+    $height: 700px + ($i * 50);
+
+    width: $width;
+    height: $height;
+    animation: spin (210) + s linear infinite;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  }
+}
+
+@for $i from 1 through 10 {
+  .circle-#{$i} {
+    $width: 700px + ($i * 50);
+    $height: 700px + ($i * 50);
+
+    width: $width;
+    height: $height;
+    animation: spin (230) + s linear infinite;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  }
+}
